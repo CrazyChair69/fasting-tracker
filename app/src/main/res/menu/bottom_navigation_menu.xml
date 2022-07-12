@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_nav_progress"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_show_chart_24"
+        android:title="@string/bottom_nav_progress"
+        app:itemRippleColor="?attr/colorOnSurface" />
+
+    <item
+        android:id="@+id/bottom_nav_recipes"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_restaurant_menu_24"
+        android:title="@string/bottom_nav_recipes" />
+
+    <item
+        android:id="@+id/bottom_nav_learn"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_psychology_24"
+        android:title="@string/bottom_nav_learn" />
+</menu>

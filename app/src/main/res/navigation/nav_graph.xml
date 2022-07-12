@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/progressOverviewFragment">
+
+    <fragment
+        android:id="@+id/progressOverviewFragment"
+        android:name="com.example.fastingtracker.progress.ProgressOverviewFragment"
+        android:label="ProgressOverviewFragment" />
+    <fragment
+        android:id="@+id/learnOverviewFragment"
+        android:name="com.example.fastingtracker.learn.LearnOverviewFragment"
+        android:label="LearnOverviewFragment" />
+    <fragment
+        android:id="@+id/recipesOverviewFragment"
+        android:name="com.example.fastingtracker.recipes.RecipesOverviewFragment"
+        android:label="RecipesOverviewFragment" />
+</navigation>
