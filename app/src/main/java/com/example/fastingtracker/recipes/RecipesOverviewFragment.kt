@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.fastingtracker.R
 import com.example.fastingtracker.databinding.FragmentRecipesOverviewBinding
 
-class RecipesOverviewFragment: Fragment() {
+class RecipesOverviewFragment : Fragment() {
     // TODO: Implement Fragment
 
     private var _binding: FragmentRecipesOverviewBinding? = null
@@ -19,6 +20,10 @@ class RecipesOverviewFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRecipesOverviewBinding.inflate(inflater, container, false)
+
+        // Set title of fragment
+        activity?.setTitle(R.string.bottom_nav_recipes)
+
         return binding.root
     }
 

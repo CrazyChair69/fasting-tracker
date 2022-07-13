@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.fastingtracker.R
 import com.example.fastingtracker.databinding.FragmentProgressOverviewBinding
 
 class ProgressOverviewFragment : Fragment() {
@@ -19,6 +20,10 @@ class ProgressOverviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProgressOverviewBinding.inflate(inflater, container, false)
+
+        // Set title of fragment
+        activity?.setTitle(R.string.bottom_nav_progress)
+
         return binding.root
     }
 

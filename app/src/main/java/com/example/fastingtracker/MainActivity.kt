@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        // Respond to clicks on bottom navigation bar
         binding.bottomNav.setOnItemSelectedListener(onNavigationItemSelected)
 
         // Change color of navigation bar. Only available if API +21 (Lollipop)
