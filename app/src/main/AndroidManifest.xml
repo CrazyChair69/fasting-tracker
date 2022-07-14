@@ -4,6 +4,7 @@
     package="com.example.fastingtracker">
 
     <application
+        android:name="com.example.fastingtracker.FastingTrackerApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
