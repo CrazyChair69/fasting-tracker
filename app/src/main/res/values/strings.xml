@@ -1,6 +1,26 @@
 <resources>
+    <!-- Used in MainActivity -->
     <string name="app_name">Fasting Tracker</string>
     <string name="bottom_nav_progress">Fortschritt</string>
     <string name="bottom_nav_recipes">Rezepte</string>
     <string name="bottom_nav_learn">Lernen</string>
+
+    <!-- Used in many parts of progress - section -->
+    <string name="date_with_colon">Datum:</string>
+    <string name="placeholder_values">-----</string>
+    <string name="before_headline">Vorher</string>
+    <string name="after_headline">Nachher</string>
+    <string name="content_description_before_picture">Ein vergangenes Bild des eigenen Körpers</string>
+    <string name="content_description_after_picture">Ein gegenwärtiges Bild des eigenen Körpers</string>
+    <string name="notes_with_colon">Notizen:</string>
+    <string name="enter_notes">Trage hier deine Notizen ein</string>
+    <string name="edit_entry">Bearbeiten</string>
+    <string name="show_all_entries">Zeige Einträge</string>
+
+    <!-- Used in ProgressOverviewFragment -->
+    <string name="progress_overview_fragment_current_diet_with_colon">Diät:</string>
+    <string name="progress_overview_fragment_new_diet">Neue Diät</string>
+    <string name="progress_overview_fragment_title_last_entry">Letzter Eintrag</string>
+    <string name="progress_overview_fragment_title_statistics">Statistiken</string>
+    <string name="progress_overview_fragment_placeholder_statistics">Der Statistiken-Abschnitt wird bald hinzugefügt!</string>
 </resources>

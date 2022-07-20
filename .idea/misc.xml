@@ -9,7 +9,9 @@
         <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/drawable/navbar_color.xml" value="0.23" />
         <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layouts/learn/layout/fragment_learn_overview.xml" value="0.36666666666666664" />
-        <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layouts/progress/layout/fragment_progress_overview.xml" value="0.31040564373897706" />
+        <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layouts/progress/layout/fragment_progress_edit_entry.xml" value="0.36666666666666664" />
+        <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layouts/progress/layout/fragment_progress_overview.xml" value="0.25" />
+        <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layouts/progress/layout/spinner_diet_item.xml" value="0.365625" />
         <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/layouts/recipes/layout/fragment_recipes_overview.xml" value="0.365625" />
         <entry key="..\:/Kotlin_EigeneProjekte/FastingTracker/FastingTrackerApp/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.35260416666666666" />
       </map>

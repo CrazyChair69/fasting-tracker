@@ -1,23 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- TODO: Implement progress overview xml -->
+<!-- TODO: Implement diet, last entry and statistics section -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".progress.ProgressOverviewFragment">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Progress Overview"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Current Diet - Section -->
+            <TextView
+                android:id="@+id/progress_overview_tv_current_diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/progress_overview_fragment_current_diet_with_colon"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/progress_overview_spn_selected_diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_tv_current_diet"
+                app:layout_constraintStart_toEndOf="@id/progress_overview_tv_current_diet"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_tv_current_diet" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/progress_overview_btn_new_diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/progress_overview_fragment_new_diet"
+                app:icon="@drawable/ic_baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_tv_current_diet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_tv_current_diet" />
+
+            <View
+                android:id="@+id/progress_overview_div_diet_to_last_entry"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_btn_new_diet" />
+
+            <!-- Last Entry - Section -->
+            <TextView
+                android:id="@+id/progress_overview_tv_headline_last_entry"
+                style="?attr/textAppearanceHeadline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/progress_overview_fragment_title_last_entry"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_div_diet_to_last_entry" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_headline_before_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/before_headline"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/progress_overview_img_before_picture"
+                app:layout_constraintStart_toStartOf="@id/progress_overview_img_before_picture"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_tv_headline_last_entry" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_headline_after_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/after_headline"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_tv_headline_before_picture"
+                app:layout_constraintEnd_toEndOf="@id/progress_overview_img_after_picture"
+                app:layout_constraintStart_toStartOf="@id/progress_overview_img_after_picture"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_tv_headline_before_picture" />
+
+            <ImageView
+                android:id="@+id/progress_overview_img_before_picture"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/content_description_before_picture"
+                app:layout_constraintEnd_toStartOf="@+id/progress_overview_img_after_picture"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_tv_headline_before_picture"
+                app:srcCompat="@color/green_light" />
+
+            <ImageView
+                android:id="@+id/progress_overview_img_after_picture"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/content_description_after_picture"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_img_before_picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/progress_overview_img_before_picture"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_img_before_picture"
+                app:srcCompat="@color/green_dark" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_date_before_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/date_with_colon"
+                app:layout_constraintStart_toStartOf="@id/progress_overview_img_before_picture"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_img_before_picture" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_selected_date_before_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/placeholder_values"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_tv_date_before_picture"
+                app:layout_constraintStart_toEndOf="@id/progress_overview_tv_date_before_picture"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_tv_date_before_picture" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_date_after_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/date_with_colon"
+                app:layout_constraintStart_toStartOf="@id/progress_overview_img_after_picture"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_img_after_picture" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_selected_date_after_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/placeholder_values"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_tv_date_after_picture"
+                app:layout_constraintStart_toEndOf="@id/progress_overview_tv_date_after_picture"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_tv_date_after_picture" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/progress_overview_rv_entry_values"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_tv_date_before_picture"
+                tools:itemCount="5" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_headline_entry_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/notes_with_colon"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_rv_entry_values" />
+
+            <!-- Displays text that user inputs in fragment_progress_edit_entry -->
+            <TextView
+                android:id="@+id/progress_overview_tv_entry_notes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/placeholder_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_tv_headline_entry_notes" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/progress_overview_btn_edit_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/edit_entry"
+                app:icon="@drawable/ic_baseline_create_24"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_btn_show_entries"
+                app:layout_constraintEnd_toStartOf="@+id/progress_overview_btn_show_entries"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_btn_show_entries" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/progress_overview_btn_show_entries"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/show_all_entries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_tv_entry_notes" />
+
+            <View
+                android:id="@+id/progress_overview_div_last_entry_to_statistics"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_btn_show_entries" />
+
+            <!-- Statistics - Section -->
+            <TextView
+                android:id="@+id/progress_overview_tv_headline_statistics"
+                style="?attr/textAppearanceHeadline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/progress_overview_fragment_title_statistics"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_div_last_entry_to_statistics" />
+
+            <!-- TODO: Implement statistics section in fragment_progress_overview -->
+
+            <TextView
+                android:id="@+id/progress_overview_tv_statistics_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/progress_overview_fragment_placeholder_statistics"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_overview_tv_headline_statistics" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
