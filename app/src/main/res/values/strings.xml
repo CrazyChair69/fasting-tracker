@@ -20,7 +20,7 @@
     <!-- Used in ProgressOverviewFragment -->
     <string name="progress_overview_fragment_current_diet_with_colon">Diät:</string>
     <string name="progress_overview_fragment_new_diet">Neue Diät</string>
-    <string name="progress_overview_fragment_title_last_entry">Letzter Eintrag</string>
+    <string name="progress_overview_fragment_title_last_entry_with_colon">Letzter Eintrag:</string>
     <string name="progress_overview_fragment_title_statistics">Statistiken</string>
     <string name="progress_overview_fragment_placeholder_statistics">Der Statistiken-Abschnitt wird bald hinzugefügt!</string>
 </resources>

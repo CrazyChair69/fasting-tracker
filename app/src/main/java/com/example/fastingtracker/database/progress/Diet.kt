@@ -22,7 +22,7 @@ data class Diet(
 
     // TODO: Implement Columns Before Picture and After Picture
     // TODO: Implement type of timeOfMeasurement. Unsure, if its right type for DatePicker
-    @ColumnInfo(name = "time_of_measurement") val timeOfMeasurement: Date,
+    @NonNull @ColumnInfo(name = "time_of_measurement") val timeOfMeasurement: Date,
     @ColumnInfo(name = "bodyweight") val bodyweight: Double,
 
     // Body circumferences - Most important ones first

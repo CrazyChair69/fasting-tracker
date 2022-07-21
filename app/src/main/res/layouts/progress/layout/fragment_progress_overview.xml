@@ -67,9 +67,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/progress_overview_fragment_title_last_entry"
+                android:text="@string/progress_overview_fragment_title_last_entry_with_colon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/progress_overview_div_diet_to_last_entry" />
+
+            <TextView
+                android:id="@+id/progress_overview_tv_headline_last_entry_date"
+                style="?attr/textAppearanceHeadline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/placeholder_values"
+                app:layout_constraintBottom_toBottomOf="@id/progress_overview_tv_headline_last_entry"
+                app:layout_constraintStart_toEndOf="@id/progress_overview_tv_headline_last_entry"
+                app:layout_constraintTop_toTopOf="@id/progress_overview_tv_headline_last_entry"
+                tools:layout_editor_absoluteX="190dp"
+                tools:layout_editor_absoluteY="124dp" />
 
             <TextView
                 android:id="@+id/progress_overview_tv_headline_before_picture"
