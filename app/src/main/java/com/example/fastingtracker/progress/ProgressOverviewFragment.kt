@@ -14,7 +14,7 @@ import com.example.fastingtracker.progress.viewmodel.ProgressViewModel
 import com.example.fastingtracker.progress.viewmodel.ProgressViewModelFactory
 
 class ProgressOverviewFragment : Fragment() {
-    // TODO: Implement Fragment
+    // TODO: Implement RecyclerView
     // TODO: Implement Spinner that uses database
 
     private val viewModel: ProgressViewModel by activityViewModels {

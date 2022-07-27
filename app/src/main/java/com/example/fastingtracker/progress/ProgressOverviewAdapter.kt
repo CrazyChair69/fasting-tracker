@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fastingtracker.database.progress.Diet
 import com.example.fastingtracker.databinding.ItemProgressOverviewBinding
 
+/**
+ * Adapter of the recyclerview in fragment_progress_overview.xml
+ */
 class ProgressOverviewAdapter :
     ListAdapter<Diet, ProgressOverviewAdapter.ProgressViewHolder>(DiffCallback) {
 
@@ -16,6 +19,10 @@ class ProgressOverviewAdapter :
         // TODO: Implement ProgressViewHolder
     }
 
+    /**
+     * Creates a new view holder when there are no existing view holders
+     * which the RecyclerView can reuse.
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProgressViewHolder {
         // Inflate the layout
         return ProgressViewHolder(
@@ -29,7 +36,6 @@ class ProgressOverviewAdapter :
      * Bind the view at the specified position.
      */
     override fun onBindViewHolder(holder: ProgressViewHolder, position: Int) {
-        // TODO: Implement onBindViewHolder(..)
     }
 
     companion object {
@@ -52,5 +58,4 @@ class ProgressOverviewAdapter :
 
         }
     }
-
 }
