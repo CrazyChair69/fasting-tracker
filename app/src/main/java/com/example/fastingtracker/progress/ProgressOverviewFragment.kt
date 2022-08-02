@@ -32,8 +32,6 @@ class ProgressOverviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProgressOverviewBinding.inflate(inflater, container, false)
-
-        // Set title of fragment
         activity?.setTitle(R.string.bottom_nav_progress)
 
         return binding.root

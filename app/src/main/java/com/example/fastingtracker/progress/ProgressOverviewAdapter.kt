@@ -16,7 +16,8 @@ class ProgressOverviewAdapter :
 
     class ProgressViewHolder(private var binding: ItemProgressOverviewBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        // TODO: Implement ProgressViewHolder
+        // TODO: Implement ProgressViewHolder (fun bind)
+            // Get total from ProgressViewModel which has a fun that stores last entry and calculates total
     }
 
     /**

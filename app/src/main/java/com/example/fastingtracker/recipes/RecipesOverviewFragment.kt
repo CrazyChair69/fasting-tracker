@@ -20,8 +20,6 @@ class RecipesOverviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRecipesOverviewBinding.inflate(inflater, container, false)
-
-        // Set title of fragment
         activity?.setTitle(R.string.bottom_nav_recipes)
 
         return binding.root

@@ -20,8 +20,6 @@ class LearnOverviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentLearnOverviewBinding.inflate(inflater, container, false)
-
-        // Set title of fragment
         activity?.setTitle(R.string.bottom_nav_learn)
 
         return binding.root
